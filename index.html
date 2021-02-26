@@ -7,14 +7,12 @@
     <title>Breakout</title>
 </head>
 <body>
-	<canvas id="mycanvas">
+	<canvas id="mycanvas" width="1200" height="700">
         I'm sorry your browser version does not support canvas <!--Fallback Content-->
     </canvas>
 <script type="text/javascript">
 //Variable Declarations
-canvas.width = 1200;
-canvas.height = 700;
-drawscreen();
+drawScreen();
 let canvas = document.getElementById('mycanvas');
 let ctx= canvas.getContext('2d');
 let ballRadius = 10;
