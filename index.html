@@ -5,7 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="styles.css">
+	<style>
+	#mycanvas
+	{
+		background-color: #31f0f0;
+		margin: 125px 0px 125px 295px;
+	}
+	</style>
     <title>Ball Brick Breaker</title>
 </head>
 
@@ -17,7 +23,7 @@
 		//Variable Declarations
 let canvas = document.getElementById('mycanvas');
 let ctx = canvas.getContext('2d');
-let ballRadius = 9;
+let ballRadius = 10;
 let x = canvas.width / 2;
 let y = canvas.height - 30;
 let dx = 2;
@@ -25,7 +31,7 @@ let dy = -2;
 
 //create paddle
 let paddleH = 12;
-let paddleW = 77;
+let paddleW = 87;
 let paddleX = (canvas.width - paddleW) / 2;
 
 //holding variables for right and left arrows on keyboard
@@ -37,8 +43,8 @@ let mysound = new Audio("8-bit-pop-sound-effect.mp3");
 let game_over = new Audio("game_over.wav");
 
 //holding variables for bricks
-let brickRowCount = 5;
-let brickColumnCount = 9;
+let brickRowCount = 8;
+let brickColumnCount = 15;
 let brickW = 60;
 let brickH = 24;
 let brickPadding = 25;
