@@ -177,13 +177,13 @@ function draw(){
 		}
         	//if no paddle hit, body of canvas is hit ==> game over
         	else {
+				game_over.play();
 				alert("GAME OVER");
 			/*swal({
 				title: "GAME OVER!!!",
 				icon: "info",
 				button: "Replay"
-			});/*
-				game_over.play();
+			});*/
 				document.location.reload();
 		}
 	}
