@@ -182,11 +182,12 @@ function draw(){
 			game_over.play();
 			swal({
 				title: "GAME OVER!!!",
-				button: "Replay"
-				}).then( Replay => {
-				if(Replay) {
-					document.location.reload();
-				}
+				icon: "info"
+			},function(isConfirm) {
+				alert("Replay");
+			});
+			$('.swal2-confirm').click(function() {
+				document.location.reload();						 
 			});
 		}
 	}
