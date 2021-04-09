@@ -7,7 +7,7 @@
     <title>Breakout</title>
 </head>
 <body>
-	<canvas id="mycanvas" width="1480" height="699">
+	<canvas id="mycanvas">
         I'm sorry your browser version does not support canvas <!--Fallback Content-->
     </canvas>
 <script type="text/javascript">
@@ -25,7 +25,7 @@ let dy = -2;
 //create paddle
 let paddleH = 12;
 let paddleW = 130;
-let paddleX = (canvas.width - paddleW)/2;
+let paddleX = (canvas.width - paddleW + 3)/2;
 
 //holding variables for right and left arrows on keyboard
 let rPressed=false;
