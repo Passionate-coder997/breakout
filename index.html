@@ -98,7 +98,7 @@ function drawBall() {
 
 function drawPaddle() {
 	ctx.beginPath();
-	ctx.rect(paddleX, canvas.height-80,paddleW,paddleH);
+	ctx.rect(paddleX, canvas.height-100,paddleW,paddleH);
 	ctx.fillStyle = 'blue';
 	ctx.fill();
 	ctx.closePath();
@@ -184,7 +184,7 @@ function draw(){
 				title: "GAME OVER!!!",
 				icon: "info",
 				button: "Replay"
-			}.then(function() {
+			},function() {
 				document.location.reload();						 
 			});
 		}
