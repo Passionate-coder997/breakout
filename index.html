@@ -98,7 +98,7 @@ function drawBall() {
 
 function drawPaddle() {
 	ctx.beginPath();
-	ctx.rect(paddleX, canvas.height-30,paddleW,paddleH);
+	ctx.rect(paddleX, canvas.height-40,paddleW,paddleH);
 	ctx.fillStyle = 'blue';
 	ctx.fill();
 	ctx.closePath();
@@ -183,7 +183,7 @@ function draw(){
 			swal({
 				title: "GAME OVER!!!",
 				button: "Replay"
-				}).then( Okay => {
+				}).then( okay => {
 				if(okay) {
 					document.location.reload();
 				}
