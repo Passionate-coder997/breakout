@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Breakout</title>
-	<script src ="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
-	//<script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script src ="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 	<canvas id="mycanvas">
@@ -99,7 +98,7 @@ function drawBall() {
 
 function drawPaddle() {
 	ctx.beginPath();
-	ctx.rect(paddleX, canvas.height-100,paddleW,paddleH);
+	ctx.rect(paddleX, canvas.height-200,paddleW,paddleH);
 	ctx.fillStyle = 'blue';
 	ctx.fill();
 	ctx.closePath();
@@ -141,7 +140,7 @@ function collisionDetection(){
 					score++;
 					mysound.play();
 					if(score === brickRowCount*brickColumnCount){
-						swal.fire({
+						swal({
 							title: "Congratulations, You won!!!",
 							button: "Replay"
 						});
@@ -181,7 +180,7 @@ function draw(){
 				title: "GAME OVER!!!",
 				icon: "info",
 				button: "Replay"
-			}).then(function() {
+			}).then(function().click() {
 				game_over.play();
 				document.location.reload();
 			});
