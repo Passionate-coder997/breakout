@@ -98,7 +98,7 @@ function drawBall() {
 
 function drawPaddle() {
 	ctx.beginPath();
-	ctx.rect(paddleX, canvas.height-50,paddleW,paddleH);
+	ctx.rect(paddleX, canvas.height-80,paddleW,paddleH);
 	ctx.fillStyle = 'blue';
 	ctx.fill();
 	ctx.closePath();
@@ -182,11 +182,9 @@ function draw(){
 			game_over.play();
 			swal({
 				title: "GAME OVER!!!",
-				icon: "info"
-			},function(isConfirm) {
-				alert("Replay");
-			});
-			$('.swal2-confirm').click(function() {
+				icon: "info",
+				button: "Replay"
+			}.then(function() {
 				document.location.reload();						 
 			});
 		}
