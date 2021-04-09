@@ -19,7 +19,7 @@ canvas.width = screen.width;
 canvas.height = screen.height;
 let ballRadius = 10;
 let x = canvas.width/2;
-let y = canvas.height - 30;
+let y = canvas.height - 150;
 let dx =2;
 let dy = -2;
 
@@ -98,7 +98,7 @@ function drawBall() {
 
 function drawPaddle() {
 	ctx.beginPath();
-	ctx.rect(paddleX, canvas.height-200,paddleW,paddleH);
+	ctx.rect(paddleX, canvas.height-150,paddleW,paddleH);
 	ctx.fillStyle = 'blue';
 	ctx.fill();
 	ctx.closePath();
@@ -140,10 +140,11 @@ function collisionDetection(){
 					score++;
 					mysound.play();
 					if(score === brickRowCount*brickColumnCount){
-						swal({
+						alert("Congratulations, You Won!!");
+						/*swal({
 							title: "Congratulations, You won!!!",
 							button: "Replay"
-						});
+						});*/
 						document.location.reload();
 					}
 				}
@@ -176,11 +177,12 @@ function draw(){
 		}
         	//if no paddle hit, body of canvas is hit ==> game over
         	else {
-			swal({
+				alert("GAME OVER");
+			/*swal({
 				title: "GAME OVER!!!",
 				icon: "info",
 				button: "Replay"
-			});
+			});/*
 				game_over.play();
 				document.location.reload();
 		}
