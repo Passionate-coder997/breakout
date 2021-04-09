@@ -176,7 +176,11 @@ function draw(){
 		}
         	//if no paddle hit, body of canvas is hit ==> game over
         	else {
-			alert("GAME OVER!!");
+			swal( 'Error!',valido.msj,'error').then((e)=>{
+  				if( valido.msj=="success" ){
+     				document.getElementById('link_btn_barra').focus();
+  			} 
+			});
 			/*swal({
 				title: "GAME OVER!!!",
 				icon: "info",
