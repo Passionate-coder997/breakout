@@ -176,19 +176,14 @@ function draw(){
 		}
         	//if no paddle hit, body of canvas is hit ==> game over
         	else {
-			swal( 'Error!',valido.msj,'error').then((e)=>{
-  				if( valido.msj=="success" ){
-     				document.getElementById('link_btn_barra').focus();
-  			} 
-			});
-			/*swal({
+			swal({
 				title: "GAME OVER!!!",
 				icon: "info",
 				button: "Replay"
 			}).then(function() {
-				document.location.reload();
 				game_over.play();
-			});*/
+				document.location.reload();
+			});
 		}
 	}
 	//bottom wall
