@@ -98,7 +98,7 @@ function drawBall() {
 
 function drawPaddle() {
 	ctx.beginPath();
-	ctx.rect(paddleX, canvas.height-paddleH,paddleW,paddleH);
+	ctx.rect(paddleX, canvas.height-15,paddleW,paddleH);
 	ctx.fillStyle = 'blue';
 	ctx.fill();
 	ctx.closePath();
@@ -143,8 +143,10 @@ function collisionDetection(){
 						swal({
 							title: "Congratulations, You won!!!",
 							button: "Replay"
+						},
+						function(){
+							document.location.reload();
 						});
-						document.location.reload();
 					}
 				}
 			}
@@ -180,8 +182,10 @@ function draw(){
 			swal({
 				title: "GAME OVER!!!",
 				button: "Replay"
-				});
-            		document.location.reload();
+				},
+				function() {
+					document.location.reload();
+			});
 		}
 	}
 	//bottom wall
