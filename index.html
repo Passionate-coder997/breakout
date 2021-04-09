@@ -18,7 +18,7 @@ canvas.width = screen.width;
 canvas.height = screen.height;
 let ballRadius = 10;
 let x = canvas.width/2;
-let y = canvas.height - 50;
+let y = canvas.height - 30;
 let dx =2;
 let dy = -2;
 
@@ -97,7 +97,7 @@ function drawBall() {
 
 function drawPaddle() {
 	ctx.beginPath();
-	ctx.rect(paddleX, canvas.height-paddleH,paddleW,paddleH);
+	ctx.rect(paddleX, canvas.height-paddleH + 30,paddleW,paddleH);
 	ctx.fillStyle = 'blue';
 	ctx.fill();
 	ctx.closePath();
