@@ -98,7 +98,7 @@ function drawBall() {
 
 function drawPaddle() {
 	ctx.beginPath();
-	ctx.rect(paddleX, canvas.height-15,paddleW,paddleH);
+	ctx.rect(paddleX, canvas.height-20,paddleW,paddleH);
 	ctx.fillStyle = 'blue';
 	ctx.fill();
 	ctx.closePath();
@@ -178,7 +178,6 @@ function draw(){
 		}
         	//if no paddle hit, body of canvas is hit ==> game over
         	else {
-            		game_over.play();
 			swal({
 				title: "GAME OVER!!!",
 				button: "Replay"
@@ -186,6 +185,7 @@ function draw(){
 				function() {
 					document.location.reload();
 			});
+			game_over.play();
 		}
 	}
 	//bottom wall
