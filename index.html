@@ -9,8 +9,8 @@
 	#mycanvas
 	{
 		background-color: #31f0f0;
-		margin: 0;
-		padding: 0;
+		margin: auto;
+		padding: auto;
 		overflow-x: auto;
 	}
 	</style>
@@ -24,7 +24,7 @@
     <script type="text/javascript">
 		//Variable Declarations
 let canvas = document.getElementById('mycanvas');
-canvas.width = screen.width;
+canvas.width = window.innerWidth;
 canvas.height = 715;
 let ctx = canvas.getContext('2d');
 let ballRadius = 10;
