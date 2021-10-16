@@ -9,8 +9,9 @@
 	#mycanvas
 	{
 		background-color: #31f0f0;
-		margin: auto;
+		margin: 0;
 		padding: 0;
+		word-wrap: break-word;
 	}
 	</style>
     <title>Ball Brick Breaker</title>
@@ -26,7 +27,7 @@
 		//Variable Declarations
 let canvas = document.getElementById('mycanvas');
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight - 30;
+canvas.height = window.innerHeight - 20;
 let ctx = canvas.getContext('2d');
 let ballRadius = 10;
 let x = canvas.width / 2;
