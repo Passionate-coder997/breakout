@@ -6,11 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<style>
-	#container
-	{
-		width: auto;
-		height: 90%;
-	}
 	#mycanvas
 	{
 		background-color: #31f0f0;
@@ -31,6 +26,7 @@
 		//Variable Declarations
 let canvas = document.getElementById('mycanvas');
 canvas.width = window.innerWidth;
+canvas.height = 90%;
 let ctx = canvas.getContext('2d');
 let ballRadius = 10;
 let x = canvas.width / 2;
