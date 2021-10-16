@@ -26,7 +26,7 @@
 		//Variable Declarations
 let canvas = document.getElementById('mycanvas');
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvas.height = window.innerHeight - 30;
 let ctx = canvas.getContext('2d');
 let ballRadius = 10;
 let x = canvas.width / 2;
@@ -35,7 +35,7 @@ let dx = 2;
 let dy = -2;
 
 //create paddle
-let paddleH = 12;
+let paddleH = 14;
 let paddleW = 97;
 let paddleX = (canvas.width - paddleW) / 2;
 
