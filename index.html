@@ -11,21 +11,20 @@
 		background-color: #31f0f0;
 		margin: auto;
 		padding: auto;
-		overflow-x: auto;
+		height: auto;
 	}
 	</style>
     <title>Ball Brick Breaker</title>
 </head>
 
 <body>
-    <canvas id="mycanvas" width="1920" height="712">
+    <canvas id="mycanvas">
         I'm sorry your browser version does not support canvas 
     </canvas>
     <script type="text/javascript">
 		//Variable Declarations
 let canvas = document.getElementById('mycanvas');
 canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
 let ctx = canvas.getContext('2d');
 let ballRadius = 10;
 let x = canvas.width / 2;
