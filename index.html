@@ -17,14 +17,15 @@
 </head>
 
 <body>
+<div id="container">
     <canvas id="mycanvas">
         I'm sorry your browser version does not support canvas 
     </canvas>
+</div>
     <script type="text/javascript">
 		//Variable Declarations
 let canvas = document.getElementById('mycanvas');
 canvas.width = window.innerWidth;
-canvas.height = 718px;
 let ctx = canvas.getContext('2d');
 let ballRadius = 10;
 let x = canvas.width / 2;
