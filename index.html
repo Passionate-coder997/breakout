@@ -183,6 +183,7 @@ function draw() {
         else {
             game_over.play();
             alert('GAME OVER!!');
+	    clearInterval(interval); //requires for chrome to end game
             document.location.reload();
         }
     }
