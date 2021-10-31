@@ -151,6 +151,7 @@ function collisionDetection() {
                     if (score === brickRowCount * brickColumnCount) {
                         alert("Congratulations, You won!!!!");
                         document.location.reload();
+			    draw();
                     }
                 }
             }
@@ -185,6 +186,7 @@ function draw() {
             alert('GAME OVER!!');
 	    clearInterval(interval); //requires for chrome to end game
             document.location.reload();
+		draw();
         }
     }
     //bottom wall
